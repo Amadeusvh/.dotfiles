@@ -8,14 +8,14 @@ in
     home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
-      home-manager.users.maxhero = (import ../../home/maxhero);
+      home-manager.users.maxhero = (import ../../home/amadeus);
     }
   ];
   # Better voltage and temperature
   boot.extraModulePackages = with config.boot.kernelPackages; [ zenpower ];
 
   users.users = {
-    maxhero = {
+    amadeus = {
       isNormalUser = true;
       uid = 1000;
       extraGroups = [
@@ -50,6 +50,7 @@ in
     android-tools
     aria2
     avizo
+    brave
     btop
     cachix
     discord
@@ -110,7 +111,6 @@ in
     gparted
 
     # Theming
-    gnome.gnome-tweaks
     orchis-theme
     ntfs3g
     libsForQt5.dolphin
@@ -256,6 +256,7 @@ in
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
   sound.mediaKeys.enable = true;
 

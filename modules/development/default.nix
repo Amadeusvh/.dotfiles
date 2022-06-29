@@ -31,7 +31,7 @@ in
 
   environment.systemPackages = with pkgs; [
     # Development
-    vscodium
+    vscode
     dbeaver
     vim
     elmPackages.elm-format
@@ -39,6 +39,7 @@ in
     libtool
     libvterm
     nixpkgs-fmt
+    postman
     shellcheck
     shfmt
     elixir_1_13
@@ -53,6 +54,7 @@ in
     ripgrep
 
     # nix-doom-emacs.doom-emacs
+    nodejs
     nodePackages.stylelint
     nodePackages.js-beautify
     emacs28Packages.vterm
